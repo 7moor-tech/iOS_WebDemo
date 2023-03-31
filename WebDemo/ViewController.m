@@ -47,10 +47,10 @@
         make.height.mas_equalTo(80);
     }];
     
-    NSString *url = [NSUserDefaults.standardUserDefaults stringForKey:@"qm_web_last_url"];
-    if (url.length > 0) {
-        textView.text = url;
-    }
+//    NSString *url = [NSUserDefaults.standardUserDefaults stringForKey:@"qm_web_last_url"];
+//    if (url.length > 0) {
+//        textView.text = url;
+//    }
    
     UIButton *sureButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [sureButton setTitle:@"确 定" forState:UIControlStateNormal];
