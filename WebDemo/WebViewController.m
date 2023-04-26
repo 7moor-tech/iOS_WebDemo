@@ -1,4 +1,4 @@
-//
+ //
 //  WebViewController.m
 //  WebDemo
 //
@@ -183,6 +183,9 @@
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     if (navigationAction.targetFrame == nil) {
         [webView loadRequest:navigationAction.request];
+        
+        //跳转浏览器
+        [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:@{} completionHandler:nil];
     }
         
     decisionHandler(WKNavigationActionPolicyAllow);
